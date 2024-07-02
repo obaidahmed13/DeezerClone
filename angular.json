@@ -37,7 +37,7 @@
               }
             ],
             "styles": [
-              "src/styles.css"
+              "/Users/obaidahmed/MusicPlayer/node_modules/bootstrap/dist/css/bootstrap.min.css"
             ],
             "scripts": []
           },

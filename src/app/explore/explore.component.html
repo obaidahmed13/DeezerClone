@@ -1,0 +1,12 @@
+<div class="p-4 w-100 h-50">
+    <div class="overflow-scroll shadow-md d-flex justify-content-around gap-3 mt-3" id="card-main">
+        <div class="p-4 border border-2 shadow-sm rounded d-flex flex-column text-center card" id="card" *ngFor="let track of tracks">
+            <h4 class="mt-3">{{track.title}}</h4>
+            <p>{{track.artist.name}}</p>
+            
+            <div>
+                <img src="" alt=""  class="mt-2" id="image-cont">
+            </div>
+            
+        </div>
+    </div> 

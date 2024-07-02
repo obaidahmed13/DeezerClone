@@ -1,0 +1,21 @@
+#card {
+    min-width: 400px;
+    min-height: 300px;
+    
+}
+
+#card-main {
+  
+
+}
+
+.card:hover {
+    background-color: whitesmoke;
+}
+
+#image-cont {
+    border-radius: 8px;
+    min-height: 300px;
+    min-width: 300px;
+    object-fit: cover;
+}
