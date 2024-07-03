@@ -7,12 +7,14 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { HomeComponent } from './home/home.component';
 import { ExploreComponent } from './explore/explore.component';
+import { FavoritesComponent } from './favorites/favorites.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    ExploreComponent
+    ExploreComponent,
+    FavoritesComponent
   ],
   imports: [
     BrowserModule,

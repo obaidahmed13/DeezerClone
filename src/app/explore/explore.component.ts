@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { GenreListService } from '../genre-list.service';
 import { DeezerService } from '../deezer.service';
 import { FavoritesService } from '../favorites.service';
 

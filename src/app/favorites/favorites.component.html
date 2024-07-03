@@ -1,0 +1,15 @@
+
+<div class="p-4 border border-2 shadow-sm rounded d-flex flex-column text-center card"  *ngFor= "let track of favorites" id="card">
+    <h4 class="mt-3">{{track.title}}</h4>
+    {{track.artist.name}}
+    <div>
+        <img src={{track.album.cover}} alt=""  class="mt-2" id="image-cont">
+    </div>
+    <div>
+        <audio controls class="mt-3">
+            <source [src]="track.preview" type="audio/mpeg">
+        </audio>
+    </div>
+    
+    
+</div>

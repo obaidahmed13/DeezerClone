@@ -9,11 +9,11 @@ import { FavoritesService } from '../favorites.service';
 })
 export class HomeComponent {
   tracks: any ;
-  trackName: string = 'Views';
-  artistName: string = 'Drake';
+  trackName: string = '';
+  artistName: string = '';
   favorites: any;
 
-  constructor(private deezerServ: DeezerService, private favoriteServ: FavoritesService){}
+  constructor(private deezerServ: DeezerService, public favServ: FavoritesService){}
 
   search(): void {
     this.deezerServ.searchTrackByName(this.artistName, this.trackName).subscribe(data=> {
@@ -26,10 +26,11 @@ export class HomeComponent {
   }
 
   likeTrack(track: any): void {
-    if(this.favorites[track.id]) {
-      delete this.favorites[track.id]
-    } else {
-      this.favorites[track.id] = track;
-    }
+    this.favServ.addToFavorites(track).subscribe(() => {
+      console.log('Added to favorites', track);
+    },
+    error => {
+      console.log('Error adding to favorites', error);
+    });
   }
 }
